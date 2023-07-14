@@ -1,0 +1,85 @@
+<%- include('../header.ejs') %>
+
+  <div class="belowmynavbar">
+
+    <div class="dash-title">
+      <h1 class="text-center py-4" style="background-color:#9ad8ea; color: #fff;">Admin's Edit Page</h1>
+    </div>
+
+    <!-- yahan humne form ke har fields ke under ke inputs mai (<%= d.name %>) kiya hai jisse humme webpage par form bhara hua mille tabhi to form ko edit kar paayinge  -->
+    <!-- yahan form ke action mai course_update ke saath id bhi to jaayegi tabhi to update kar paayinge data -->
+<div class="container edit-container">
+    <form action="/admin_update/<%= d._id %>" method="post">
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" value="<%= d.name %>">
+      </div>
+
+      <div class="mb-3">
+        <label for="name">Email</label>
+        <input type="email" name="email" class="form-control" value="<%= d.email %>">
+      </div>
+
+      <div class="mb-3">
+        <label for="name">Mobile Number</label>
+        <input type="number" name="mobile_number" class="form-control" value="<%= d.mobile_number %>">
+      </div>
+
+      <div class="mb-3">
+        <label for="address">Address</label>
+        <textarea name="address" id="" cols="30" rows="5" class="form-control"><%= d.address %></textarea>
+      </div>
+      <!-- radio for male and female -->
+
+      <div class="form-group mb-3 pt-0"><label>Gender</label><br><br>
+        <div class="row">
+          <div class="col-md-3">
+            <div><label role="button" for="male">Male</label><input type="radio" role="button"
+                class="form-check-input ms-3" name="gender" id="male" value="Male" <%=d.gender=='Male' ?'checked':'' %>
+              ></div>
+          </div>
+          <div class="col-md-9">
+            <div><label role="button" for="female">Female</label><input type="radio" role="button"
+                class="form-check-input ms-3" name="gender" id="female" value="Female" <%=d.gender=='Female'
+                ?'checked':'' %> ></div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- dropdown for qualification -->
+
+      <div class="form-group mb-3 ">
+        <label for="qualification">Qualification</label><br><br>
+        <select name="qualification" id="qualification" class="form-control" required="">
+          <option value="">----- Select Qualification -----</option>
+          <option value="10th" <%=d.qualification=='10th' ?'selected':'' %> >10th</option>
+          <option value="12th" <%=d.qualification=='12th' ?'selected':'' %> >12th</option>
+          <option value="BCA" <%=d.qualification=='bca' ?'selected':'' %> >BCA</option>
+          <option value="B.SC." <%=d.qualification=='B.SC.' ?'selected':'' %> >B.SC</option>
+          <option value="MCA" <%=d.qualification=='MCA' ?'selected':'' %> >MCA</option>
+          <option value="OTHERS" <%=d.qualification=='OTHERS' ?'selected':'' %> >OTHERS</option>
+        </select>
+      </div><br>
+
+      <div class="form-group mb-3">
+        <label for="course">Course</label><br><br>
+        <input type="text" value="btech" name="course" class="form-control" readonly>
+      </div><br>
+
+      <!-- submit button -->
+      <div class="text-center">
+        <p><button type="submit" class="btn btn-primary btn-block">Update</button></p>
+      </div>
+
+    </form>
+
+  </div>
+
+
+  </div>
+
+
+  <%- include('../footer.ejs') %>

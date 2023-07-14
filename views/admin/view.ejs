@@ -1,0 +1,66 @@
+<%- include('../header.ejs') %>
+
+    <div class="belowmynavbar">
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-bordered border-secondary">
+                    <thead>
+                        <tr style="background-color: #35b9dd; color: #fff;">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Qualification</th>
+                            <th>Course</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- to jo data d mai uth kar aarha tha usse item mai daala aur loop chalana padega kyunki 
+                    jitni baar data insert hoga utni baar hee data ko display karinge to syntax yea hai uska  -->
+
+                        <tr>
+                            <!-- isme jo name,email,mobile_number hai wo modals ke under Course.js hai uski fields hai inke data iss syntax se display ho jaayega  -->
+                            <td>
+                                <%= d._id %>
+                            </td>
+                            <td>
+                                <%= d.name %>
+                            </td>
+                            <td>
+                                <%= d.email %>
+                            </td>
+                            <td>
+                                <%= d.mobile_number %>
+                            </td>
+                            <td>
+                                <%= d.address %>
+                            </td>
+                            <td>
+                                <%= d.gender %>
+                            </td>
+                            <td>
+                                <%= d.qualification %>
+                            </td>
+                            <td>
+                                <%= d.course %>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="my-4 text-center" >
+            <a href="/admin/dashboard" class="backdashboard">Back To The Admin Dashboard</a>
+        </div>
+
+    </div>
+
+    <%- include('../footer.ejs') %>

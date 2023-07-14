@@ -1,0 +1,153 @@
+<%- include('./header.ejs') %>
+
+    <div class="belowmynavbar">
+        <h1 class="text-center">Your Profile page</h1>
+        <% if(message.length> 0){ %>
+            <div class="alert alert-success">
+                <%= message %>
+            </div>
+
+            <% } %>
+
+                <% if(error.length> 0){ %>
+                    <div class="alert alert-danger">
+                        <%= error %>
+                    </div>
+
+                    <% } %>
+                        <div class="container" width="400px">
+                            <div class="card-body-lg text-center ">
+                                <img src="<%= image.url %>" width="150px" height="150px" style="border-radius: 100px;"
+                                    alt="avatar">
+                                <h5 class="my-3">
+                                    <h6>Name : </h6>
+                                    <%= n %>
+                                </h5>
+                                <p class="text-muted mb-1">
+                                <h6>Email : </h6>
+                                <%= e %>
+                                    </p>
+
+
+                                    <div class="mt-4 mb-4">
+                                        <a href="" type="button" class="btn btn-floating  btn-lg box">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        <a href="" type="button" class="btn btn-floating  btn-lg box">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="" type="button" class="btn btn-floating  btn-lg box">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                        <a href="" type="button" class="btn btn-floating  btn-lg box">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <a href="javascript:;" data-bs-toggle="modal"
+                                            data-bs-target="#change-pass-modal" class="btn cors">Change Password</a>
+                                        <a href="javascript:;" data-bs-toggle="modal"
+                                            data-bs-target="#change-profile-modal"
+                                            class="btn btn-outline-primary ms-1">Update Profile</a>
+                                    </div>
+                            </div>
+                        </div>
+
+    </div>
+
+    <!-- model for change password -->
+
+    <!-- Model -->
+    <div class="modal fade" id="change-pass-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                    <hr>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/change_password" method="post">
+                        <div class="mb-3">
+                            <input name="oldpassword" placeholder="Enter your old Password" type="password"
+                                class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <input name="newpassword" placeholder="Enter your new Password" type="password"
+                                class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <input name="cpassword" placeholder="Enter your Confirm Password" type="password"
+                                class="form-control">
+                        </div>
+
+
+                        <!-- submit button -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p><button type="submit" class="btn btn-primary text-center">Update</button></p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- model for change Profile -->
+
+    <div class="modal fade" id="change-profile-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+                    <hr>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/profile_update" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="enter your name here"
+                                value="<%= n %>">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="name">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="enter your email here"
+                                value="<%= e %>">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="image">Image</label>
+                            <input type="file" id="myInput" name="image" class="form-control mt-3" required="">
+                            <img src="<%= image.url %>" width="130px" height="130px" style="border-radius: 100px;"
+                                alt="avatar">
+                        </div>
+
+
+                        <!-- submit button -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p><button type="submit" class="btn btn-primary text-center">Update profile</button></p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('./footer.ejs') %>

@@ -1,0 +1,139 @@
+.weblogo {
+    width: 47px;
+  }
+  .photo{
+    width: 120px;
+  }
+  .navbar-nav li {
+    padding: 0 10px;
+}
+.navbar-nav li a {
+    color: white;
+    font-weight: 600;
+    font-size: 21px;
+}
+.profiledropdown a{
+    color:white;
+    font-weight:600px;
+    font-size:21px;
+}
+.navbar{
+    opacity: 0.7;
+}
+.banner{
+    height: 478px;
+}
+.carousel-control-prev-icon {
+   background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e);
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+.carousel-control-next {
+    right: 0;
+}
+.carousel {
+    position: relative;
+}
+.course_heading {
+    text-transform: uppercase;
+    font-size: 40px;
+    position: relative;
+    font-family: 'prague',sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+.course_para {
+    font-size: 20px;
+    font-family: 'Droid Serif', sans-serif;
+    font-weight: 600px;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+}
+.h5, h5 {
+    font-size: 1.25rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.cors {
+    background: #35b9dd !important;
+    color: #fff !important;
+    padding: 10px 20px;
+}
+.footer {
+    background: #35b9dd;
+}
+.box{
+    background: #35b9dd;
+    color: white;
+}
+.fa-ul>li {
+    position: relative;
+}
+.fa-li {
+    left: calc(var(--fa-li-width, 2em)*-1);
+    position: absolute;
+    text-align: center;
+    width: var(--fa-li-width,2em);
+    line-height: inherit;
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+.copy{
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+/* contact form styling */
+
+.contactform form input{
+    border:1px solid grey;
+}
+
+/* course display page styling */
+
+.belowmynavbar{
+    margin-top:126px;
+}
+
+.backdashboard{
+    text-decoration: none;
+    color: #ffff;
+    background-color: #ffc107;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* edit page form styling */
+
+.edit-container form input{
+    border:1px solid grey;
+}
+
+.edit-container form textarea{
+    border:1px solid grey;
+}
+
+.edit-container form select{
+    border:1px solid grey;
+}
+
+.contactform form textarea{
+    border:1px solid grey;
+}

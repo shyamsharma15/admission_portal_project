@@ -1,0 +1,82 @@
+<%- include('../header.ejs') %>
+
+    <div class="belowmynavbar">
+
+        <!-- <div class="dash-title">
+            <h1 class="text-center py-4" style="background-color:#9ad8ea; color: #fff;">Display</h1>
+        </div> -->
+
+        <div class="container">
+            <% if(message.length> 0){ %>
+                <div class="alert alert-success">
+                    <%= message %>
+                </div>
+
+                <% } %>
+                    <div class="table-responsive">
+                        <table class="table table-bordered caption-top">
+                            <caption class="text-center" style="font-weight:900;">Courses you have enrolled</caption>
+                            <thead>
+                                <tr style="background-color: #35b9dd; color: #fff;">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile Number</th>
+                                    <th>Course</th>
+                                    <th>Status</th>
+                                    <th>Comment</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- to jo data d mai uth kar aarha tha usse item mai daala aur loop chalana padega kyunki 
+                    jitni baar data insert hoga utni baar hee data ko display karinge to syntax yea hai uska  -->
+                    <%  i = 1 %>
+                                <% d.forEach((item)=>{ %>
+                                    <tr>
+                                        <!-- isme jo name,email,mobile_number hai wo modals ke under Course.js hai uski fields hai inke data iss syntax se display ho jaayega  -->
+                                        <td>
+                                            <%= i++ %>
+                                        </td>
+                                        <td>
+                                            <%= item.name %>
+                                        </td>
+                                        <td>
+                                            <%= item.email %>
+                                        </td>
+                                        <td>
+                                            <%= item.mobile_number %>
+                                        </td>
+                                        <td>
+                                            <%= item.course %>
+                                        </td>
+                                        <td>
+                                            <%= item.status %>
+                                        </td>
+                                        <td>
+                                            <%= item.comment %>
+                                        </td>
+                                        <td>
+                                            <!-- view walle btn par href mai yea (/course_view/<%= item._id %>) isliye diya taaki hum view par click karren to hume id mil jaaye student ki (click karinge to pahelle route par jaata hai fir controller par aur fir method par ) -->
+                                            <a class="btn btn-info" href="/course_view/<%= item._id %>">View</a>
+                                            <a class="btn btn-primary" href="/course_edit/<%= item._id %>">Edit</a>
+                                            <!-- <a class="btn btn-danger" href="/course_delete/<%= item._id %>">Delete</a> -->
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+
+        <div class="my-4 text-center">
+            <a href="/dashboard" class="backdashboard">Back To The Dashboard</a>
+        </div>
+
+    </div>
+
+
+
+    <%- include('../footer.ejs') %>

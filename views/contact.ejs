@@ -1,0 +1,52 @@
+<%- include('./header.ejs') %>
+
+    < <!-- body content -->
+        <div class="belowmynavbar">
+            <div class="contactcontainer">
+                <div class="container my-4">
+                    <h2 class="contactheading text-center">Contact Us</h2>
+                    <div class="contactform">
+                        <form action="/insertcontact" method="post">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Enter Name</label>
+                                <input name="name" type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input name="email" type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Enter phone</label>
+                                <input name="phone" type="number" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="enter your phone">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Check me-out
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea name="message" class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
+                            </div>
+                            <div class="container text-center">
+
+                                <button type="submit" class="btn btn-primary btn-lg text-center">Submit</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <%- include('./footer.ejs') %>

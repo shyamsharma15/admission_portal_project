@@ -1,0 +1,48 @@
+.ab{
+    background-color: #12587a;
+}
+.page{
+    border-radius: 1rem;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.girl{
+    border-radius: 1rem 0 0 1rem;
+}
+.register_logo {
+    margin: auto;
+}
+.logo{
+    height: 120px;
+    width: 176px;
+}
+.regs_heading {
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #12587a;
+    font-size: 30px;
+}
+.form-control-lg {
+    min-height: calc(1.5em + 1rem + 2px);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-label {
+    margin-bottom: 0.5rem;
+}
+.pic{
+    color: #a2a2a2;
+}
+.register{
+    background: #12587a; 
+    color:#ffff;
+}
+.b{
+    color: #393f81;
+}
